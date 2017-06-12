@@ -4,8 +4,11 @@ Spark Docker Image
 Based on:
 
 [catawiki](https://github.com/catawiki/)
+
 [Singularities](https://github.com/SingularitiesCR/spark-docker)
 
+
+## Example docker-compose.yml
 
 ```YAML
 version: "2"
@@ -79,6 +82,7 @@ docker-compose logs -f
 
 ```sh
 docker exec -it <container> spark-shell --master spark://master:7077
+
 ```
 
 ### Scaling
@@ -87,6 +91,7 @@ If you wish to increase the number of workers scale the `worker` service by runn
 
 ```sh
 docker-compose scale worker=2
+
 ```
 
 The workers will automatically register themselves with the master.
