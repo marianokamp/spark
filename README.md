@@ -70,7 +70,7 @@ services:
 
 ### Start/stop/log containers
 
-````sh
+```sh
 docker-compose up -d
 docker-compose kill
 docker-compose logs -f
