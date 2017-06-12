@@ -87,7 +87,7 @@ docker exec -it <container> spark-shell --master spark://master:7077
 
 ### Scaling
 
-If you wish to increase the number of workers scale the `worker` service by running the `scale` command like follows:
+The number of service instances can be scaled up and down like below:
 
 ```sh
 docker-compose scale worker=2
