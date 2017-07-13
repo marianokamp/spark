@@ -2,7 +2,7 @@ FROM openjdk:8-jre
 MAINTAINER Mariano Kamp <mariano.kamp@gmail.com>
 
 # Version
-ENV SPARK_VERSION=2.1.1
+ENV SPARK_VERSION=2.2.0
 
 # Set home
 ENV SPARK_HOME=/usr/local/spark-$SPARK_VERSION
@@ -10,7 +10,7 @@ ENV SPARK_HOME=/usr/local/spark-$SPARK_VERSION
 RUN apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get install \
   -yq --no-install-recommends \
-  netcat telnet\
+  netcat telnet vim\
   && rm -rf /var/lib/apt/lists/*
 
 # https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz
@@ -25,4 +25,4 @@ RUN mkdir -p "${SPARK_HOME}" \
 ENV PATH=$PATH:$SPARK_HOME/bin
 
 # Ports
-EXPOSE 6066 7077 8080 8081
+#EXPOSE 6066 7077 8080 8081
